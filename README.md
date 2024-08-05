@@ -1,10 +1,10 @@
 # Introduction
 
-The `dmr/laravel-php-to-js` package provides a simple way to pass PHP variables to JavaScript in your Laravel applications.
+The `fet/laravel-php-to-js` package provides a simple way to pass PHP variables to JavaScript in your Laravel applications.
 
 # Installation
 
-1. `composer require dmr/laravel-php-to-js`
+1. `composer require fet/laravel-php-to-js`
 2. `php artisan vendor:publish --provider="Dmr\PhpToJs\PhpToJsServiceProvider" --tag="config"`
 
 # Configuration
