@@ -11,6 +11,10 @@ class PhpToJsServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'phptojs');
 
+        $this->publishes([
+            __DIR__ . '/../config/phptojs.php' => config_path('phptojs.php'),
+        ], 'config');
+
         $this->registerMiddleware(PhpToJsMiddleware::class);
     }
 
