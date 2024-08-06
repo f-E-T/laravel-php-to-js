@@ -5,7 +5,7 @@ namespace Dmr\PhpToJs;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static string namespace()
+ * @method static string getNamespace()
  * @method static void add(array $items)
  * @method static array all()
  * @method static array variables()

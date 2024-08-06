@@ -24,10 +24,7 @@ class PhpToJsMiddleware
 
         $scriptTag = View::make(
             'phptojs::scriptTag',
-            [
-                'namespace' => PhpToJsFacade::namespace(),
-                'variables' => PhpToJsFacade::variables(),
-            ]
+            ['namespaces' => PhpToJsFacade::all()]
         );
 
         $position = strripos($content, '</body>');

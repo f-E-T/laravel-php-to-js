@@ -1,3 +1,5 @@
 <script type="text/javascript">
-    window.{{ $namespace }} = {{ \Illuminate\Support\Js::from($variables) }};
+    @foreach($namespaces as $namespace => $variables)
+        window.{{ $namespace }} = {{ \Illuminate\Support\Js::from($variables) }};
+    @endforeach
 </script>

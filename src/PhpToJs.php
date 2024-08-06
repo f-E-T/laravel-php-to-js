@@ -16,8 +16,8 @@ class PhpToJs
      */
     public function add(array $items): void
     {
-        $this->variables[$this->namespace()] = array_merge(
-            $this->variables[$this->namespace()] ?? [],
+        $this->variables[$this->getNamespace()] = array_merge(
+            $this->variables[$this->getNamespace()] ?? [],
             $items
         );
     }
@@ -35,7 +35,7 @@ class PhpToJs
      */
     public function variables(): array
     {
-        return $this->variables[$this->namespace()] ?? [];
+        return $this->variables[$this->getNamespace()] ?? [];
     }
 
     public function setNamespace(string $namespace): void
@@ -43,7 +43,7 @@ class PhpToJs
         $this->namespace = $namespace;
     }
 
-    public function namespace(): string
+    public function getNamespace(): string
     {
         return $this->namespace;
     }

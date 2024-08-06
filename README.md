@@ -25,7 +25,7 @@ use Dmr\PhpToJs\PhpToJsFacade;
 
 PhpToJsFacade::add(['foo' => 'bar']);
 
-PhpToJsFacade::namespace('test');
+PhpToJsFacade::setNamespace('test');
 PhpToJsFacade::add(['bat' => 'baz']);
 ```
 

@@ -65,7 +65,7 @@ class PhpToJsTest extends TestCase
 
         $phpToJs = app(PhpToJs::class);
 
-        $this->assertEquals('test', $phpToJs->namespace());
+        $this->assertEquals('test', $phpToJs->getNamespace());
     }
 
     #[Test]
@@ -79,8 +79,12 @@ class PhpToJsTest extends TestCase
 
         PhpToJsFacade::add(['foo' => 'bar']);
 
+        PhpToJsFacade::setNamespace('test');
+        PhpToJsFacade::add(['bat' => 'baz']);
+
         $response = $this->get('/test');
 
         $response->assertSee("window.phpToJs = JSON.parse('{\u0022foo\u0022:\u0022bar\u0022}');", false);
+        $response->assertSee("window.test = JSON.parse('{\u0022bat\u0022:\u0022baz\u0022}');", false);
     }
 }
