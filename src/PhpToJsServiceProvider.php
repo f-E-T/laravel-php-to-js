@@ -39,6 +39,6 @@ class PhpToJsServiceProvider extends ServiceProvider
     {
         // @phpstan-ignore-next-line
         $kernel = $this->app[Kernel::class];
-        $kernel->pushMiddleware($middleware);
+        $kernel->appendMiddlewareToGroup('web', $middleware);
     }
 }
