@@ -87,4 +87,18 @@ class PhpToJsTest extends TestCase
         $response->assertSee("window.phpToJs = JSON.parse('{\u0022foo\u0022:\u0022bar\u0022}');", false);
         $response->assertSee("window.test = JSON.parse('{\u0022bat\u0022:\u0022baz\u0022}');", false);
     }
+
+    #[Test]
+    public function it_injects_variables_only_into_html()
+    {
+        Route::get('/test', function () {
+            return response('let foo = "</body>";', 200)->header('Content-Type', 'text/javascript');
+        });
+
+        PhpToJsFacade::add(['foo' => 'bar']);
+
+        $response = $this->get('/test');
+
+        $this->assertEquals('let foo = "</body>";', $response->getContent());
+    }
 }

@@ -18,7 +18,7 @@ class PhpToJsMiddleware
     {
         $response = $next($request);
 
-        if (!$content = $response->getContent()) {
+        if ((!$content = $response->getContent()) || !$this->isHtml($response)) {
             return $response;
         }
 
@@ -38,5 +38,10 @@ class PhpToJsMiddleware
         }
 
         return $response;
+    }
+
+    protected function isHtml(Response $response): bool
+    {
+        return str_contains($response->headers->get('Content-Type'), 'text/html');
     }
 }
