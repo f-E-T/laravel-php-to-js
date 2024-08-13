@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmr\PhpToJs;
+namespace Fet\PhpToJs;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Http\Kernel;

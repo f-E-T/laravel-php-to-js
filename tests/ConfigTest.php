@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmr\PhpToJs\Tests;
+namespace Fet\PhpToJs\Tests;
 
 use PHPUnit\Framework\Attributes\Test;
 

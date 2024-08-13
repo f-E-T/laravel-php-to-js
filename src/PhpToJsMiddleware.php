@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmr\PhpToJs;
+namespace Fet\PhpToJs;
 
 use Closure;
 use Illuminate\Http\Request;

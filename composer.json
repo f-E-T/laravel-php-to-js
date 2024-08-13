@@ -26,14 +26,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Dmr\\PhpToJs\\": "src/",
-            "Dmr\\PhpToJs\\Factories\\": "database/factories/",
-            "Dmr\\PhpToJs\\Seeders\\": "database/seeders/"
+            "Fet\\PhpToJs\\": "src/",
+            "Fet\\PhpToJs\\Factories\\": "database/factories/",
+            "Fet\\PhpToJs\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Dmr\\PhpToJs\\Tests\\": "tests/"
+            "Fet\\PhpToJs\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -45,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dmr\\PhpToJs\\PhpToJsServiceProvider"
+                "Fet\\PhpToJs\\PhpToJsServiceProvider"
             ]
         }
     }

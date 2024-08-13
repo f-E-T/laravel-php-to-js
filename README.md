@@ -5,7 +5,7 @@ The `fet/laravel-php-to-js` package provides a simple way to pass PHP variables 
 # Installation
 
 1. `composer require fet/laravel-php-to-js`
-2. `php artisan vendor:publish --provider="Dmr\PhpToJs\PhpToJsServiceProvider" --tag="config"`
+2. `php artisan vendor:publish --provider="Fet\PhpToJs\PhpToJsServiceProvider" --tag="config"`
 
 # Configuration
 
@@ -18,10 +18,10 @@ return [
 ```
 
 # Usage
-You can use the `\Dmr\PhpToJs\PhpToJsFacade` facade to add variables that are then transformed to JavaScript.
+You can use the `\Fet\PhpToJs\PhpToJsFacade` facade to add variables that are then transformed to JavaScript.
 
 ```php
-use Dmr\PhpToJs\PhpToJsFacade;
+use Fet\PhpToJs\PhpToJsFacade;
 
 PhpToJsFacade::add(['foo' => 'bar']);
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Dmr\PhpToJs\Tests;
+namespace Fet\PhpToJs\Tests;
 
-use Dmr\PhpToJs\PhpToJs;
-use Dmr\PhpToJs\PhpToJsFacade;
+use Fet\PhpToJs\PhpToJs;
+use Fet\PhpToJs\PhpToJsFacade;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Framework\Attributes\Test;
 

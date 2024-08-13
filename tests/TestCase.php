@@ -1,8 +1,8 @@
 <?php
 
-namespace Dmr\PhpToJs\Tests;
+namespace Fet\PhpToJs\Tests;
 
-use Dmr\PhpToJs\PhpToJsServiceProvider;
+use Fet\PhpToJs\PhpToJsServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
