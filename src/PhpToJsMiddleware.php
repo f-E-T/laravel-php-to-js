@@ -42,6 +42,6 @@ class PhpToJsMiddleware
 
     protected function isHtml(Response $response): bool
     {
-        return str_contains($response->headers->get('Content-Type'), 'text/html');
+        return str_contains((string) $response->headers->get('Content-Type'), 'text/html');
     }
 }
